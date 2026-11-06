@@ -3,19 +3,15 @@ revision = 5
 requires-python = ">=3.12"
 
 [[package]]
-name = "app-builder"
+name = "backend"
 version = "0.1.0"
-source = { virtual = "." }
-
-[package.dev-dependencies]
-dev = [
+source = { editable = "." }
+dependencies = [
     { name = "pre-commit" },
 ]
 
 [package.metadata]
-
-[package.metadata.requires-dev]
-dev = [{ name = "pre-commit", specifier = ">=4.7.0" }]
+requires-dist = [{ name = "pre-commit", specifier = ">=4.7.0" }]
 
 [[package]]
 name = "cfgv"
